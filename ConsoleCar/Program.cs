@@ -9,9 +9,15 @@ namespace ConsoleCar
     {
         static void Main(string[] args)
         {
-            //CarManagerTest();
+            CarManagerTest();
 
 
+            //Colortest();
+
+        }
+
+        private static void Colortest()
+        {
             ColorManager colorManager = new ColorManager(new EfColorDal());
 
 
@@ -19,20 +25,17 @@ namespace ConsoleCar
             {
                 Console.WriteLine(c.Name);
             }
-
-
-
         }
 
         private static void CarManagerTest()
         {
             CarManager cars = new CarManager(new EfCarDal());
-            var masda = new Car() { BrandId = 2, ColorId = 4, Description = "said baradi", ModelYear = 2005 };
+           
 
-            cars.Add(masda);
-            foreach (var car in cars.GetAll())
+          
+            foreach (var car in cars.GetCarsDtails())
             {
-                Console.WriteLine(car.Id + " " + car.ModelYear);
+                Console.WriteLine(car.Id +"  "+ car.BrandName+"  " + car.ModelYear);
             }
             Console.WriteLine(cars.GetCarsByBrandId(1).Description);
         }

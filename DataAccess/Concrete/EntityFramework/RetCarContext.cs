@@ -15,8 +15,8 @@ namespace DataAccess.Concrete.EntityFramework
             optionsBuilder.UseSqlServer("server=DESKTOP-7K06ESJ; database=ReCapProject; Trusted_Connection=true");
         }
 
-        public DbSet<Car> Car{ get; set; }
-        public DbSet<Brand> Brand{ get; set; }
-        public DbSet<Color> Color{ get; set; }
+        public DbSet<Car> Cars{ get; set; }
+        public DbSet<Brand> Brands{ get; set; }
+        public DbSet<Color> Colors{ get; set; }
     }
 }
