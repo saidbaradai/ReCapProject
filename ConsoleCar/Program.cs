@@ -35,7 +35,7 @@ namespace ConsoleCar
           
             foreach (var car in cars.GetCarsDtails())
             {
-                Console.WriteLine(car.Id +"  "+ car.BrandName+"  " + car.ModelYear);
+                Console.WriteLine(car.Id +"  "+ car.BrandName+"  color:"+car.ColorName+" " + car.ModelYear);
             }
             Console.WriteLine(cars.GetCarsByBrandId(1).Description);
         }
