@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -18,9 +19,14 @@ namespace Business.Concrete
             _colorDal = colorDal;
         }
 
-        public void Add(Color color)
+        public IResult Add(Color color)
         {
+            if (color==null)
+            {
+                return new ErrorResult("There is no color");
+            }
             _colorDal.Add(color);
+            return new SuccessResult("Color has been added successfuly");
         }
 
         public void Delete(Color color)
