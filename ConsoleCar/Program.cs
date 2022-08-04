@@ -9,13 +9,13 @@ namespace ConsoleCar
     {
         static void Main(string[] args)
         {
-            CarManagerTest();
+
 
 
             //Colortest();
 
         }
-
+        /*
         private static void Colortest()
         {
             ColorManager colorManager = new ColorManager(new EfColorDal());
@@ -39,5 +39,9 @@ namespace ConsoleCar
             }
             Console.WriteLine(cars.GetCarsByBrandId(1).Description);
         }
+    }
+
+    */
+
     }
 }
